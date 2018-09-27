@@ -1,0 +1,383 @@
+
+body,html{
+    background-color: #f3f3f4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.login{
+    background-color: white;
+    border: 1px solid #e9dcdc;
+    border-radius: 5px;
+    padding: 17px;
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.redondeo-imagen{
+    width:100px;
+    height:100px;
+    border-radius:150px;
+}
+
+.letra-gris-login{
+    color: #676a6c;
+}
+
+.visible_menu_movil{
+	position: fixed; /*Fixed ya que queremos que la posición sea en relación al navegador*/
+    top: 0; /*El valor 0 indica que va a quedar arriba de todo*/
+    left: 0; /*Para que el menu se ubique siempre en la parte izquierda de la pantalla*/
+    width: 100%; /*100% para que ocupe todo el ancho del navegador*/  
+    z-index: 100;
+    
+}
+
+.visible_menu_movil_desplegable{
+	position: fixed; /*Fixed ya que queremos que la posición sea en relación al navegador*/
+    /*margin-top: 86px; /*El valor 0 indica que va a quedar arriba de todo*/
+    left: 0; /*Para que el menu se ubique siempre en la parte izquierda de la pantalla*/
+    width: 100%; /*100% para que ocupe todo el ancho del navegador*/  
+    z-index: 100;
+}
+
+.home_menu_movil_desplegable{
+	position: fixed; /*Fixed ya que queremos que la posición sea en relación al navegador*/
+    margin-top: 40px; /*El valor 0 indica que va a quedar arriba de todo*/
+    left: 0; /*Para que el menu se ubique siempre en la parte izquierda de la pantalla*/
+    width: 100%; /*100% para que ocupe todo el ancho del navegador*/  
+    z-index: 100;
+}
+
+.detalle_menu_movil_desplegable{
+	position: fixed; /*Fixed ya que queremos que la posición sea en relación al navegador*/
+    margin-top: 85px; /*El valor 0 indica que va a quedar arriba de todo*/
+    left: 0; /*Para que el menu se ubique siempre en la parte izquierda de la pantalla*/
+    width: 100%; /*100% para que ocupe todo el ancho del navegador*/  
+    z-index: 100;
+}
+
+.espaciador_logo{
+    margin-left: 10px;
+}
+
+.espaciador_dropdown{
+    height: 40px;
+}
+
+.select_sula{
+    border: 1px solid #e6e6e6;
+    color: #555555; 
+    width: 100px;
+    background-color: white;
+}
+
+@media(max-width: 300px){
+    .login{
+        width: 85%;
+    }
+}
+
+/*################ MODAL INICIAR SESION #####################*/
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    display: none;/*Con esto oculta todo*/
+    
+
+
+}
+
+.modal-content{
+    margin-top: 100px;
+    
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+
+/*################ MODAL REGISTRASE #####################*/
+.bg-modal-register{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    display: none;/*Con esto oculta todo*/
+    margin-top: 45px;
+}
+
+.modal-content-register{
+    margin-top: 50px; 
+}
+
+.close-register{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+/* ################################     ACOMODAR LIKE DE PRODCUTOS      ###########################3*/
+.separa-like{
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 50px;
+    font-size: 20px;
+  }
+
+  .separa-like-detalle{
+    display: block;
+    position: absolute;
+    top: 11px;
+    right: 50px;
+    font-size: 20px;
+  }
+
+/*########################## MANTENER CATEGORIA Y BUSQUEDA #######################################*/
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    font-size: 20px;
+}
+
+.categoria_lista{
+    margin: 0;
+}
+
+.categoria_lista_movil{
+    display:none;
+}
+
+@media(max-width: 770px){
+    .categoria_lista_movil{
+        display:flex;
+    }
+    .categoria_lista{
+        display: none;
+    }
+}
+
+
+/*#################################### TAMAÑO FIJO IMAGEN PRODUCTO  */
+.size_img{
+    height: 360px;
+}
+
+@media(max-width: 420px){
+    .size_img{
+        height: 450px;
+    }
+}
+
+
+/*#################################### GALERIA  */
+.galeria_general{
+    margin: .5vw;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flexbox-wrap: wrap;
+    -ms-flexbox-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+}
+
+.galeria_especifica{
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .2vw;
+    max-height: 250px
+}
+
+.galeria_especifica img{
+    width: 100%;
+    height: 250px;
+}
+
+@media(max-width: 420px){
+    .galeria_especifica{
+        margin: 3px;
+    }
+
+    galeria_general{
+        padding: 0;
+    }
+}
+
+
+/*######################3 HOVER CARRITO ################################*/
+.info_carrito{
+    display: none;
+}
+
+
+/*############################################# LINLKS */
+a:active {color: #1ab394 !important}
+a:hover {color: #1ab394}
+
+/*############################## DROPDOWN ##########################*/
+.dropbtn_sula {
+    background-color: white;
+    color: #555555;
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+    padding-left:10px;
+    padding-right:10px;
+    cursor: pointer;
+}
+
+.dropdown_sula {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content_sula {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content_sula a {
+    color: #555555;
+    padding: 4px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content_sula a:hover {background-color: #1ab394;
+						   color:white;}
+
+/*
+.dropdown_sula:hover .dropdown-content_sula {
+    display: block;
+}*/
+
+.dropdown_sula:hover .dropbtn_sula {
+    background-color: white;
+}
+
+
+/*#####################  CANTIDADES DE LIKE ####################*/
+.p_right{
+    padding-left: 70%;
+}
+
+/*############### SESION MOVIL #####################*/
+.espacio_imagen_login{
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.contenedor_sula{
+    margin: 0%;
+}
+
+.p_movil_sula{
+    margin-top: 5px;
+    width: auto;
+}
+.a_movil_sula{
+    padding-left: 80%;
+    margin-bottom: 7px;
+    width: auto;
+}
+
+/*###################### CARRITO ##########################*/
+
+.btn_menos{
+    border-right: 1px solid #e6e6ee;
+    color: #aaa;
+}
+
+.btn_mas{
+    border-left: 1px solid #e6e6ee;
+    color: #aaa;
+}
+
+.espaciador_carrito{
+    /*margin-top: 55px;
+    border-top: 1px solid #e6e6ee;
+    width: 100% !important;
+*/
+    padding-top: 20px;
+}
+
+.tamano_fijo{
+    height: 50px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 95px;
+    border-bottom: 1px solid #e6e6ee;
+
+}
+
+.encabezado_cart{
+    border: 1px solid #e6e6e6;
+}
+
+.agregado_carrito{
+    margin: 0%;
+}
+
+.input_cupon{
+    border-bottom: 1px solid #e6e6e6;
+    border-radius: 2px;
+}
+/*########################### MENU CARRITO ######################*/
+
+
+/*################### BTN COMPRAR YA PRODUCTO####################*/
+.btn_comprarya_sula {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -45px;
+  }
+
+  .block2-overlay:hover .btn_comprarya_sula {
+    bottom: 20px;
+  }
+
+  .btagregar_espaciador{
+    margin-bottom: 30px;
+  }
