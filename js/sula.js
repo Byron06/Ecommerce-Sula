@@ -43,16 +43,6 @@ function(){
 document.querySelector('.bg-modal').style.display = 'none';
 });
 
-// HOVER SOBRE LIKE QUE CAMBIA DE COLOR
-/*
-function cambiar () {
-    document.getElementById('like').src = "images/sula/like.png";
-   }
-   
-   function volver () {
-    document.getElementById('like').src = "images/sula/like_blanco.png";
-   }
-*/
    // MARCADOR DE LIKES
    var i=1;
    function cambiaImagen(id_photo) 
@@ -107,3 +97,12 @@ console.log('$$$$$$$$$$$$$$$##$$$$$$$$$$$$$$$$$');
        }
     
    }
+
+
+   document.getElementsByClassName('.block2-btn-addcart').addEventListener('click',
+   function () {
+    var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+    $(this).on('click', function () {
+        swal(nameProduct, "! Se agrego a tu carrito !", "success");
+    });
+});
